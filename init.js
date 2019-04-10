@@ -57,10 +57,10 @@ if (typeof window.cyInit === 'undefined') {
     }, []);
 
     const prioritizedAttrs = attrsReduced.filter(
-      attr => attr.match(/data-test-\w+/g) !== null
+      attr => attr.match(/data-test=\w+/g) !== null
     );
     const otherAttrs = attrsReduced.filter(
-      attr => attr.match(/data-test-\w+/g) === null
+      attr => attr.match(/data-test=\w+/g) === null
     );
 
     return prioritizedAttrs.concat(otherAttrs);
